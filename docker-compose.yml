@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  mongo_6:
+    image: mongo:6.0
+    container_name: mongo_6
+    ports:
+      - 27017:27017
+    networks:
+      - network1
+networks:
+  network1:
+    name: mi_red
+    external: true
